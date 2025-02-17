@@ -17,7 +17,7 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -270,7 +270,9 @@ input[data-error]::after {
   opacity: 0;
 }
 .checkbox-input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
@@ -405,13 +407,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  overflow: hidden;
-  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
+display: flex;
 }
 .hero-content {
   padding: 51px 67px;
@@ -420,15 +416,13 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  width: 509px;
 }
 .hero-content::after {
   content: "";
   width: 100%;
   height: 100%;
-  background: #232323;
   position: absolute;
-  right: -80px;
   top: 0;
 }
 .hero-content > * {
@@ -436,15 +430,16 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
-  font-weight: normal;
+  font-size: 96px;
+  font-weight: 500;
   white-space: nowrap;
 }
 .hero-text {
-  width: 146%;
-  font-weight: normal;
+  font-weight: 400;
   margin-top: 57px;
   padding: 0;
+  font-size: 23px;
+  font-family: 'DM sans';
 }
 .btn-signup {
   outline: none;
@@ -455,7 +450,8 @@ input[data-error]::after {
   margin-top: 59px;
 }
 .hero-img {
-  grid-column: span 8;
+  width: 750px;
+  height: 657px;
 }
 .hero-img img {
   width: 100%;
