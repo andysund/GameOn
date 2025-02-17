@@ -90,6 +90,9 @@ function validateForm() {
     alert("Vous devez accepter les conditions générales.");
     isValid = false;
   }
+  if (isValid) {
+    alert("Merci ! Votre réservation a été reçue.");
+  }
 
-  return isValid;
+  return isValid; ;
 }
